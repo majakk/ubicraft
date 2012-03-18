@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="studio.coldstream.ubicraft"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.NFC" />
+	<uses-feature android:name="android.hardware.nfc" android:required="true" />
+    <application android:icon="@drawable/craft" android:label="@string/app_name">
+        <activity android:name=".MainActivity"
+                  android:theme="@android:style/Theme.NoTitleBar"
+				  android:configChanges="keyboardHidden|orientation"
+				  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+<!--              <intent-filter> -->
+<!--  				<action android:name="android.nfc.action.TAG_DISCOVERED"/> -->
+<!--  				<category android:name="android.intent.category.DEFAULT"/> -->
+<!--  			</intent-filter> -->
+        </activity>
+        <activity android:name=".tellduslive.TelldusLiveAuthentication">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<category android:name="android.intent.category.BROWSABLE"></category>
+				<data android:scheme="remotestick-tellduslive"></data>
+			</intent-filter>
+		</activity>
+		
+        <activity android:name=".AddUbiNodeActivity"
+        		  android:theme="@android:style/Theme.NoTitleBar"
+				  android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+            	<action android:name="android.intent.action.DEFAULT" />
+				<category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".CraftUbiDeviceActivity"
+        		  android:theme="@android:style/Theme.NoTitleBar"
+				  android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+            	<action android:name="android.intent.action.DEFAULT" />
+				<category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+<!--             <intent-filter> -->
+<!-- 				<action android:name="android.nfc.action.TAG_DISCOVERED"/> -->
+<!-- 				<category android:name="android.intent.category.DEFAULT"/> -->
+<!-- 			</intent-filter> -->
+        </activity>
+        
+        <activity android:name=".UbiDevicesListActivity"
+        		  android:theme="@android:style/Theme.NoTitleBar"
+				  android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+            	<action android:name="android.intent.action.DEFAULT" />
+				<category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+</manifest>

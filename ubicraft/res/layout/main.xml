@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:clickable="false"
+	android:focusable="false"
+	android:background="#101255">
+
+	<TextView
+	    android:id="@+id/menu_text"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#202488"
+	    android:clickable="false"
+	    android:gravity="center"
+	    android:lines="1"
+	    android:padding="6dp"
+	    android:text="@string/app_title"
+	    android:textColor="#FFFFFF"
+	    android:textSize="18dp"
+	    android:textStyle="bold" >
+
+	</TextView>
+	<TableLayout
+		android:id="@+id/menubar"
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:layout_below="@+id/menu_text"
+		android:background="#999999">
+	</TableLayout>
+	<GridView
+		android:id="@+id/GridView1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="16dp"
+		android:verticalSpacing="16dp"
+		android:horizontalSpacing="16dp"
+		android:numColumns="2"		
+		android:stretchMode="columnWidth"
+		android:background="#101255"
+		android:clickable="false"
+		android:gravity="center" 
+		android:layout_below="@+id/menubar">
+	</GridView>
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginBottom="0dp"
+	    android:orientation="vertical" >
+
+	    <TextView
+	        android:id="@+id/title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hello" />
+
+	</LinearLayout>
+
+</RelativeLayout>
+
